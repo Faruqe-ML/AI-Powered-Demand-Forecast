@@ -5,6 +5,7 @@ import streamlit as st
 
 from app_pages.executive_dashboard import show_executive_dashboard
 from app_pages.homepage import show_home
+from app_pages.sales_analysis_dashboard import show_sales_analytics
 
 st.set_page_config(
     page_title="RetailPulse AI Platform",
@@ -61,3 +62,6 @@ if page_key == "home":
 
 elif page_key == "executive":
     show_executive_dashboard()
+
+elif page_key == "sales":
+    show_sales_analytics()
