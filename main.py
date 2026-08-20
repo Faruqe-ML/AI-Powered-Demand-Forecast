@@ -3,6 +3,7 @@ import warnings
 
 import streamlit as st
 
+from app_pages.executive_dashboard import show_executive_dashboard
 from app_pages.homepage import show_home
 
 st.set_page_config(
@@ -57,3 +58,6 @@ st.sidebar.markdown(f"""
 
 if page_key == "home":
     show_home()
+
+elif page_key == "executive":
+    show_executive_dashboard()
