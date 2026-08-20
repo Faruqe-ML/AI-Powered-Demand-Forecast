@@ -9,6 +9,7 @@ from app_pages.homepage import show_home
 from app_pages.inventory_dashboard import show_inventory_dashboard
 from app_pages.product_performance_dashboard import show_product_performance
 from app_pages.sales_analysis_dashboard import show_sales_analytics
+from app_pages.stockout_risk_dashboard import show_stockout_risk
 
 st.set_page_config(
     page_title="RetailPulse AI Platform",
@@ -77,3 +78,6 @@ elif page_key == "categories":
 
 elif page_key == "inventory":
     show_inventory_dashboard()
+
+elif page_key == "stockout":
+    show_stockout_risk()
