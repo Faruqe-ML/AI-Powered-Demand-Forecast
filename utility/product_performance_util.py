@@ -384,6 +384,79 @@ def create_empty_figure(message):
 
     return fig
 
+def create_empty_figure(message):
+    """Create empty figure with centered title and white text"""
+
+    fig = go.Figure()
+
+    fig.add_annotation(
+        text=message,
+        x=0.5,
+        y=0.5,
+        xref="paper",
+        yref="paper",
+        showarrow=False,
+        font=dict(
+            size=16,
+            color="white"
+        )
+    )
+
+    fig.update_layout(
+        height=400,
+
+        template="plotly_dark",
+
+        plot_bgcolor="#0e1117",
+        paper_bgcolor="#0e1117",
+
+        # Center title
+        title=dict(
+            text=message,
+            x=0.5,
+            xanchor="center",
+            font=dict(
+                size=18,
+                color="white"
+            )
+        ),
+
+        # All text white
+        font=dict(
+            size=12,
+            color="white"
+        ),
+
+        # Horizontal scrollbar
+        xaxis=dict(
+            rangeslider=dict(
+                visible=True,
+                thickness=0.08,
+                bgcolor="#1a1d24",
+                bordercolor="#667eea",
+                borderwidth=1
+            ),
+            tickfont=dict(color="white"),
+            title_font=dict(color="white"),
+            gridcolor="rgba(255,255,255,0.05)"
+        ),
+
+        yaxis=dict(
+            tickfont=dict(color="white"),
+            title_font=dict(color="white"),
+            gridcolor="rgba(255,255,255,0.05)"
+        ),
+
+        margin=dict(
+            l=40,
+            r=20,
+            t=60,
+            b=70
+        )
+    )
+
+    return fig
+
 def create_product_scatter_chart(daily_sales):
     """Product Performance Scatter: Units vs Revenue"""
 
