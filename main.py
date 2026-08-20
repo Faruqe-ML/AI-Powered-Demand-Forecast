@@ -9,7 +9,6 @@ from app_pages.homepage import show_home
 from app_pages.inventory_dashboard import show_inventory_dashboard
 from app_pages.overstock_dashboard import show_overstock_dashboard
 from app_pages.product_performance_dashboard import show_product_performance
-from app_pages.promo_dashboard import show_promotion_dashboard
 from app_pages.sales_analysis_dashboard import show_sales_analytics
 from app_pages.stockout_risk_dashboard import show_stockout_risk
 
@@ -87,5 +86,3 @@ elif page_key == "stockout":
 elif page_key == "overstock":
     show_overstock_dashboard()
 
-elif page_key == "promotion":
-    show_promotion_dashboard()
