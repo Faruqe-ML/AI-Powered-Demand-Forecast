@@ -6,6 +6,7 @@ import streamlit as st
 from app_pages.category_performance import show_category_performance
 from app_pages.executive_dashboard import show_executive_dashboard
 from app_pages.homepage import show_home
+from app_pages.inventory_dashboard import show_inventory_dashboard
 from app_pages.product_performance_dashboard import show_product_performance
 from app_pages.sales_analysis_dashboard import show_sales_analytics
 
@@ -73,3 +74,6 @@ elif page_key == "products":
 
 elif page_key == "categories":
     show_category_performance()
+
+elif page_key == "inventory":
+    show_inventory_dashboard()
